@@ -4,9 +4,9 @@ minutes: 10
 
 # Shared References
 
-A reference provides a way to access another value without taking responsibility
-for the value, and is also called "borrowing". Shared references are read-only,
-and the referenced data cannot change.
+A reference provides a way to access another value without taking ownership of
+the value, and is also called "borrowing". Shared references are read-only, and
+the referenced data cannot change.
 
 <!-- mdbook-xgettext: skip -->
 
@@ -37,6 +37,8 @@ fn x_axis(x: &i32) -> &(i32, i32) {
 ```
 
 <details>
+
+- References can never be null in Rust, so null checking is not necessary.
 
 - A reference is said to "borrow" the value it refers to, and this is a good
   model for students not familiar with pointers: code can use the reference to

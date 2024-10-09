@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,28 +12,5 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// ANCHOR: solution
-// ANCHOR: collatz_length
-/// Determine the length of the collatz sequence beginning at `n`.
-fn collatz_length(mut n: i32) -> u32 {
-    // ANCHOR_END: collatz_length
-    let mut len = 1;
-    while n > 1 {
-        n = if n % 2 == 0 { n / 2 } else { 3 * n + 1 };
-        len += 1;
-    }
-    len
-}
-
-// ANCHOR: tests
-#[test]
-fn test_collatz_length() {
-    assert_eq!(collatz_length(11), 15);
-}
-// ANCHOR_END: tests
-
-// ANCHOR: main
-fn main() {
-    println!("Length: {}", collatz_length(11));
-}
-// ANCHOR_END: main
+pub mod evaluator;
+pub mod slides;

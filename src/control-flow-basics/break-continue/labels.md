@@ -22,8 +22,12 @@ fn main() {
 
 <details>
 
-- Note that `loop` is the only looping construct which returns a non-trivial
-  value. This is because it's guaranteed to be entered at least once (unlike
-  `while` and `for` loops).
+- Labeled break also works on arbitrary blocks, e.g.
+  ```rust
+  'label: {
+      break 'label;
+      println!("This line gets skipped");
+  }
+  ```
 
 </details>
